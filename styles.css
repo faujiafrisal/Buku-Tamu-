@@ -93,9 +93,6 @@ select:focus {
 .radio-option {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 72px;
   padding: 12px 15px;
   border: 2px solid var(--primary);
   border-radius: 10px;
@@ -104,7 +101,6 @@ select:focus {
   transition: all 0.2s ease;
   font-size: 16px;
   color: var(--primary);
-  text-align: center;
 }
 
 .radio-option:hover {
@@ -113,13 +109,6 @@ select:focus {
 
 .radio-option input[type="radio"] {
   accent-color: var(--primary);
-  flex-shrink: 0;
-}
-
-@media screen and (max-width: 420px) {
-  .radio-group {
-    grid-template-columns: 1fr;
-  }
 }
 
 .time-picker {
