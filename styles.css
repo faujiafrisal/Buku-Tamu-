@@ -68,9 +68,9 @@ label {
   color: var(--primary);
 }
 
-input,
-select {
-  width: 100%;
+input:not([type="radio"]):not([type="hidden"]),
+select{
+    width:100%;
   padding: 12px 15px;
   border: 2px solid var(--primary);
   background-color: var(--secondary);
@@ -84,6 +84,22 @@ select:focus {
   box-shadow: 4px 4px 0px var(--primary);
 }
 
+@media (max-width: 600px){
+
+    .radio-group{
+        grid-template-columns:1fr;
+    }
+
+    .radio-option{
+        padding:16px;
+    }
+
+    .radio-option span{
+        font-size:16px;
+    }
+
+}
+
 .radio-group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -91,7 +107,7 @@ select:focus {
 }
 
 .radio-option {
-  display: flex;
+  display: flex;  
   align-items: center;
   padding: 12px 15px;
   border: 2px solid var(--primary);
@@ -101,6 +117,19 @@ select:focus {
   transition: all 0.2s ease;
   font-size: 16px;
   color: var(--primary);
+}
+
+.radio-option span{
+    flex:1;
+    white-space:normal;
+    word-break:break-word;
+    line-height:1.4;
+}
+
+.radio-option input[type="radio"]{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
 }
 
 .radio-option:hover {
