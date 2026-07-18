@@ -57,7 +57,7 @@ h1 {
 }
 
 .input-group {
-  isplay: flex;
+  display: flex;
   margin-bottom: 20px;
   position: relative;
 }
